@@ -6,6 +6,12 @@ import Plactice_4 from './Plactice_4';
 // import Plactice_5 from './Plactice_5';
 import Plactice_6 from './Plactice_6';
 import Greeting from './Greeting';
+import ToggleSwitch from './ToggleSwitch';
+import AddItemForm from './AddItemForm';
+import Counter from './Counter';
+import Login from './LoginForm';
+import UserList from './UserList';
+import {users} from './Users';
 import './style.css';
 
 
@@ -19,7 +25,11 @@ export default function App() {
       {/* <Plactice_5/> */}
       <Plactice_6/>
       <Greeting name="John"/>
-
+      <ToggleSwitch/>
+      <AddItemForm/>
+      <Counter/>
+      <Login/>
+      <UserList users={users}/>
     </React.Fragment>
   )
 }
