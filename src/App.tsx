@@ -12,6 +12,7 @@ import Counter from './Counter';
 import Login from './LoginForm';
 import UserList from './UserList';
 import {users} from './Users';
+import Router from './Router';
 import './style.css';
 
 
@@ -30,6 +31,7 @@ export default function App() {
       <Counter/>
       <Login/>
       <UserList users={users}/>
+      <Router/>
     </React.Fragment>
   )
 }
