@@ -1,0 +1,12 @@
+.picker-bg {
+  display: inline-block;
+}
+.active {
+  border: solid 1px rgb(111, 0, 255);
+}
+button {
+  margin-left: 10px;
+}
+button:first-of-type {
+  margin-left: 0;
+}
