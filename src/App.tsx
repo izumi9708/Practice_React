@@ -1,37 +1,30 @@
 import * as React from 'react';
-import Plactice_1 from './Plactice_1';
-import Plactice_2 from './Plactice_2';
-import Plactice_3 from './Plactice_3';
-import Plactice_4 from './Plactice_4';
-// import Plactice_5 from './Plactice_5';
-import Plactice_6 from './Plactice_6';
-import Greeting from './Greeting';
-import ToggleSwitch from './ToggleSwitch';
-import AddItemForm from './AddItemForm';
-import Counter from './Counter';
-import Login from './LoginForm';
-import UserList from './UserList';
-import {users} from './Users';
-import Router from './Router';
-import './style.css';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import App_1 from './App_1';
+import App_2 from './App_2';
+import './App.css';
 
 
 export default function App() {
   return (
     <React.Fragment>
-      <Plactice_1/>
-      <Plactice_2/>
-      <Plactice_3/>
-      <Plactice_4/>
-      {/* <Plactice_5/> */}
-      <Plactice_6/>
-      <Greeting name="John"/>
-      <ToggleSwitch/>
-      <AddItemForm/>
-      <Counter/>
-      <Login/>
-      <UserList users={users}/>
-      <Router/>
+      <BrowserRouter>
+        <div className="head-flex">
+          <div className="nav-item"><Link to="/">App_1</Link></div>
+          <div className="nav-item"><Link to="/App_2">App_2</Link></div>
+        </div>
+
+        <Switch>
+          <Route exact path="/">
+            <App_1/>
+          </Route>   
+          
+          <Route exact path="/App_2">
+            <App_2/>
+          </Route>   
+        </Switch>
+        
+      </BrowserRouter>
     </React.Fragment>
   )
 }
