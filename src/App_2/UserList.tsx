@@ -13,10 +13,29 @@ import * as React from 'react';
 // 各ユーザーの情報を表示するために、ループ処理を使用してください。
 // ユーザー情報をクリックしたときのイベントハンドラーも作成してください。
 
-export default function UserList(props){
-  return (
-    <div>
+type Props = {
+  users:{
+    id:number;
+    name:string
+  }[]
+}
+export default function UserList(props:Props){
+  function getUserInfo(id,name){
+    console.log('id:',id,'name:',name);
+  }
 
+  return (
+    <div style={{display:'flex',width:'100%',marginTop:'20px'}}>
+      {props.users.map(val => 
+        <div
+          style={{
+            border:'solid 1px #3c3c3c',
+            width:'100%',
+            padding:'5px'
+          }}
+          onClick={() => getUserInfo(val.id,val.name)}
+        >{val.name}</div>
+      )}
     </div>
   )
 }
