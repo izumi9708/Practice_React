@@ -8,7 +8,7 @@ export default function App_2(){
   return (
     <>
       <TabMenu tab={tabs}/>
-      <UserList user={users}/>
+      <UserList users={users}/>
     </>
   )
 }
